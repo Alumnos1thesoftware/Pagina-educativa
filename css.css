@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,31 +7,31 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin-left: 150px;
- 
+  margin: 0;
+  padding: 0 10px;
 }
 
 .container-total {
   display: flex;
+  flex-direction: column;
 }
-
-
 
 header {
   background-color: rgb(47, 141, 218);
-  height: 350px;
+  height: auto;
+  padding: 20px;
   border-radius: 7px;
-  margin-top: 1px;
-  margin: left 0%;
+  margin-top: 10px;
+  text-align: center;
 }
 
 img {
   border-radius: 50%;
+  max-width: 100%;
+  height: auto;
 }
 
-  
-
-
+/* Barra de navegación */
 nav {
   background-color: #6f6e7a;
   height: 40px;
@@ -40,36 +41,68 @@ nav {
   letter-spacing: 1px;
   color: white;
   border-radius: 3px;
-  margin-top: 10px;
-  margin: auto;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 100%;
 }
 
+/* Contenido principal */
 main {
   background: linear-gradient(to top, #6c7a83, #4c5b63);
   padding: 20px;
   color: white;
   border-radius: 7px;
-  margin-top: 10px;
-  margin: auto;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 100%;
 }
 
-
-
+/* Pie de página */
 footer {
-
   background-color: #6c7a83;
   color: white;
- border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
   height: 50px;
-  
   text-align: center;
-  align-content: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-footer img{
- border-radius: 0;
+footer img {
+  border-radius: 0;
+  max-width: 100%;
+  height: auto;
 }
+
+/* MEDIA QUERIES: Responsividad */
+@media (min-width: 768px) {
+  .container-total {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  nav, main {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin-left: 150px;
+  }
+
+  header {
+    text-align: left;
+  }
+
+  nav, main {
+    width: 60%;
+  }
+}
+
 
 
 
